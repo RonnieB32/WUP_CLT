@@ -158,7 +158,7 @@ print(paste('mean = ', mean(my1000$k25),' sd = ',sd(my1000$k25)))
 
 ```
 
-From this pattern all of the graphs are only going to have one peak, the mean is r' mean(my1000$k25)' the sd is 'rsd(my1000$k25)'.
+From this pattern all of the graphs are only going to have one peak, the mean is r' mean(my1000$k25)' the sd is 'sd(my1000$k25)'.
 
 ```{r}
 numb = 36
@@ -181,7 +181,7 @@ print(paste('mean = ', mean(my1000$k36),' sd = ',sd(my1000$k36)))
 
 ```
 
-From this pattern all of the graphs are only going to have one peak, the mean is r' mean(my1000$k36)' the sd is 'rsd(my1000$k36)'.
+From this pattern all of the graphs are only going to have one peak, the mean is r' mean(my1000$k36)' the sd is 'sd(my1000$k36)'.
 
 #conclusion
 
