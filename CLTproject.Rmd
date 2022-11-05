@@ -137,6 +137,52 @@ print(paste('mean = ', mean(my1000$k16),' sd = ',sd(my1000$k16)))
 
 There is also only one peak in this graph, the mean is 'r mean (my1000k16)', the sd is 'r(my1000k16)'
 
+```{r}
+numb = 25
+Hdata = Homers_data[sample(1:1000,size=numb*1000, replace=T),"kkardashtemp"]
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+my1000$k25 = x.avg
 
 
+p <- ggplot(my1000, aes(x=k25),col=sex) + 
+  geom_density() +
 
+# Add mean line
+ geom_vline(aes(xintercept=mean(k25)),
+            color="blue", linetype="dashed", size=1)
+p + ggtitle("n = 25") +
+  xlab("temperature") + ylab(" density")
+
+print(paste('mean = ', mean(my1000$k25),' sd = ',sd(my1000$k25)))
+
+```
+
+From this pattern all of the graphs are only going to have one peak, the mean is r' mean(my1000$k25)' the sd is 'rsd(my1000$k25)'.
+
+```{r}
+numb = 36
+Hdata = Homers_data[sample(1:1000,size=numb*1000, replace=T),"kkardashtemp"]
+mdata  <-matrix(Hdata,nrow=1000,ncol=numb)
+x.avg <- apply(mdata,1,mean)
+my1000$k36 = x.avg
+
+
+p <- ggplot(my1000, aes(x=k36),col=sex) + 
+  geom_density() +
+
+# Add mean line
+ geom_vline(aes(xintercept=mean(k36)),
+            color="blue", linetype="dashed", size=1)
+p + ggtitle("n = 36") +
+  xlab("temperature") + ylab(" density")
+
+print(paste('mean = ', mean(my1000$k36),' sd = ',sd(my1000$k36)))
+
+```
+
+From this pattern all of the graphs are only going to have one peak, the mean is r' mean(my1000$k36)' the sd is 'rsd(my1000$k36)'.
+
+#conclusion
+
+from the look of all the samples the mean stayed basically the same the only ones that actually changed was the bigger sample the more the sd will reduce you divide the original with the square root of the sample taking out and you will get the new sd.
